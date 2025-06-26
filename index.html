@@ -22,10 +22,18 @@
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.5); /* optional: dark overlay to improve text visibility */
+      background: rgba(0, 0, 0, 0.5);
       padding: 2rem;
       border-radius: 12px;
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     h1 {
@@ -54,7 +62,7 @@
 </head>
 <body>
   <div class="overlay">
-    <h1>mountainfutures.ch</h1>
+    <h1>Mountain Futures</h1>
     <p>Coming soon — stay tuned!</p>
   </div>
 </body>
