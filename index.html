@@ -2,42 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mountain Futures</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      height: 100vh;
+      padding: 0;
+      height: 100%;
+      font-family: 'Georgia', serif;
+      color: white;
+    }
+
+    body {
+      background: url('splash-image.jpg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      background-color: #f5f5f5;
-      font-family: Arial, sans-serif;
-      color: #333;
+      justify-content: center;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.5); /* optional: dark overlay to improve text visibility */
+      padding: 2rem;
+      border-radius: 12px;
       text-align: center;
     }
-    img {
-      max-width: 80%;
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+
     h1 {
-      font-size: 2em;
+      font-size: 3em;
       margin: 0;
+      font-weight: normal;
+      font-family: 'Brush Script MT', cursive;
     }
+
     p {
-      font-size: 1.2em;
-      color: #666;
-      margin-top: 8px;
+      font-size: 1.5em;
+      margin-top: 1em;
+      font-family: 'Georgia', serif;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="splash-image.jpg" alt="Mountain Futures" />
-  <h1>Mountain Futures</h1>
-  <p>Coming soon — stay tuned!</p>
+  <div class="overlay">
+    <h1>Mountain Futures</h1>
+    <p>Coming soon — stay tuned!</p>
+  </div>
 </body>
 </html>
